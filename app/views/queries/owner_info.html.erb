@@ -1,0 +1,31 @@
+<h2>List the information of the owner of an specific unit</h2>
+
+<form method='get'>
+  <p>
+    <label>Condo Name</label>
+    <input type='text' name='condo_name' value='<%= @condo_name %>' />
+  </p>
+  <p>
+    <label>Unit #</label>
+    <input type='text' name='unit_number' value='<%= @unit_number %>' />
+  </p>
+  <p>
+    <input type='submit' value='Search'/>
+  </p>
+</form>
+
+<% if @owner.present? %>
+  <h2>Owner</h2>
+  <p>
+    <label>Id:</label>
+    <%= @owner.id %>
+  </p>
+  <p>
+    <label>Name:</label>
+    <%= @owner.name %>
+  </p>
+  <p>
+    <label>Address:</label>
+    <%= @owner.address %>
+  </p>
+<% end %>

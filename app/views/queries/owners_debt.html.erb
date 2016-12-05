@@ -1,0 +1,29 @@
+<h2>Sum of the outstanding debt of all owners (including fines, interest
+and indexation until current date)</h2>
+
+<% if @owners_debt.present? %>
+
+  <h2>Debts by Owner</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Owner Id</th>
+        <th>Owner Name</th>
+        <th>Onwer Address</th>
+        <th>Outstanding Debt</th>
+      <tr>
+    </thead>
+    <tbody>
+      <% @owners_debt.each do |od| %>
+        <tr>
+          <td><%= od[:owner].id %></td>
+          <td><%= od[:owner].name %></td>
+          <td><%= od[:owner].address %></td>
+          <td>$<%= od[:outstandingDebt] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>

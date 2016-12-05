@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  generated_pdf_path: MyString
+  address: MyText
+  name: MyString
+
+two:
+  generated_pdf_path: MyString
+  address: MyText
+  name: MyString

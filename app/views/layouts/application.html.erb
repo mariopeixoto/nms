@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Qpc</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>Menu</h1>
+<ul>
+  <li><%= link_to 'List all condos', list_condos_path %></li>
+  <li><%= link_to 'List all units of an specific condo', list_units_path %></li>
+  <li><%= link_to 'List the information of the owner of an specific unit', owner_info_path %></li>
+  <li><%= link_to 'List all debts of an specific unit', unit_debts_path %></li>
+  <li><%= link_to 'Sum of the outstanding debt of an specific unit (including fines, interest and indexation until current date)', unit_outstanding_debt_path %></li>
+  <li><%= link_to 'Sum of the outstanding debt of an specific condo including all units debts (including fines, interest and indexation until current date)', condo_outstanding_debt_path %></li>
+  <li><%= link_to 'Sum of all indexation values for each index', sum_indexations_path %></li>
+  <li><%= link_to 'List all units belonging to condos that name starts with an specific text', condo_units_path %></li>
+  <li><%= link_to 'List all units owned by an specific owner', owner_units_path %></li>
+  <li><%= link_to 'List the owners who own at least a unit in a specific condo', condo_owners_path %></li>
+  <li><%= link_to 'Sum of all indexation values from some date until now for an specific index', sum_indexation_from_date_path %></li>
+  <li><%= link_to 'List all owners', list_owners_path %></li>
+  <li><%= link_to 'Find all units in debt for more than X months with an outstanding debt greater than Y dollars', units_in_debt_path %></li>
+  <li><%= link_to 'Sum of the outstanding debt of all owners (including fines, interest and indexation until current date)', owners_debt_path %></li>
+  <li><%= link_to 'Find all notices sent to an specific owner', owner_notices_path %></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

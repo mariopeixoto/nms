@@ -1,0 +1,38 @@
+<h2>List all units owned by an specific owner</h2>
+
+<form method='get'>
+  <p>
+    <label>Owner name</label>
+    <input type='text' name='owner_name' value='<%= @owner_name %>' />
+  </p>
+  <p>
+    <input type='submit' value='Search'/>
+  </p>
+</form>
+
+<% if @units.present? %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Number</th>
+        <th>Building</th>
+        <th>Owner</th>
+        <th>Condominium</th>
+      <tr>
+    </thead>
+    <tbody>
+      <% @units.each do |unit| %>
+        <tr>
+          <td><%= unit.id %></td>
+          <td><%= unit.number %></td>
+          <td><%= unit.building %></td>
+          <td><%= unit.owner.name %></td>
+          <td><%= unit.condominium.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>

@@ -1,0 +1,20 @@
+<h2>Sum of all indexation values from some month until now for an specific index</h2>
+
+<form method='get'>
+  <p>
+    <label>Indexation Name</label>
+    <input type='text' name='indexation_name' value='<%= @indexation_name %>' />
+  </p>
+  <p>
+    <label>Month/Year</label>
+    <input type='text' name='month' value='<%= @month %>' />
+    <input type='text' name='year' value='<%= @year %>' />
+  </p>
+  <p>
+    <input type='submit' value='Search'/>
+  </p>
+</form>
+
+<% if @sum_indexation.present? %>
+  <h2>Sum: <%= @sum_indexation %>%</h2>
+<% end %>

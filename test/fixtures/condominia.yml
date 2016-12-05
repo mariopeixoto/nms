@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fine_pct: 1.5
+  interest_pct: 1.5
+  indexation_id: 1
+
+two:
+  name: MyString
+  fine_pct: 1.5
+  interest_pct: 1.5
+  indexation_id: 1

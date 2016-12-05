@@ -1,0 +1,42 @@
+<h2>Find all units in debt for more than X months with an outstanding debt greater than Y dollars</h2>
+
+<form method='get'>
+  <p>
+    <label>X (Months)</label>
+    <input type='text' name='months' value='<%= @months %>' />
+  </p>
+  <p>
+    <label>Y (Dollars)</label>
+    <input type='text' name='dollars' value='<%= @dollars %>' />
+  </p>
+  <p>
+    <input type='submit' value='Search'/>
+  </p>
+</form>
+
+<% if @units.present? %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Number</th>
+        <th>Building</th>
+        <th>Owner</th>
+        <th>Condominium</th>
+      <tr>
+    </thead>
+    <tbody>
+      <% @units.each do |unit| %>
+        <tr>
+          <td><%= unit.id %></td>
+          <td><%= unit.number %></td>
+          <td><%= unit.building %></td>
+          <td><%= unit.owner.name %></td>
+          <td><%= unit.condominium.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>

@@ -1,0 +1,38 @@
+<h2>Find all notices sent to an specific owner</h2>
+
+<form method='get'>
+  <p>
+    <label>Owner Name</label>
+    <input type='text' name='owner_name' value='<%= @owner_name %>' />
+  </p>
+  <p>
+    <input type='submit' value='Search'/>
+  </p>
+</form>
+
+<% if @notices.present? %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Owner Name</th>
+        <th>Id</th>
+        <th>Generated PDF Path</th>
+        <th>Name</th>
+        <th>Address</th>
+      <tr>
+    </thead>
+    <tbody>
+      <% @notices.each do |notice| %>
+        <tr>
+          <td><%= notice.debt.unit.owner.name %></td>
+          <td><%= notice.id %></td>
+          <td><%= notice.generated_pdf_path %></td>
+          <td><%= notice.name %></td>
+          <td><%= notice.address %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>

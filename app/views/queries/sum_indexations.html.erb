@@ -1,0 +1,18 @@
+<h2>Sum of all indexation values for each index</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sum_indexations.each do |si| %>
+      <tr>
+        <td><%= si['name'] %></td>
+        <td><%= si['value'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

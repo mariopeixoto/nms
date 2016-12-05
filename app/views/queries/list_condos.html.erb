@@ -1,0 +1,23 @@
+<h2>List all condos</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Fine Percentage</th>
+      <th>Interest Percentage</th>
+      <th>Contract Indexation</th>
+    <tr>
+  </thead>
+  <tbody>
+    <% @condos.each do |condo| %>
+      <tr>
+        <td><%= condo.id %></td>
+        <td><%= condo.name %></td>
+        <td><%= condo.fine_pct %>%</td>
+        <td><%= condo.interest_pct %>%</td>
+        <td><%= condo.indexation.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

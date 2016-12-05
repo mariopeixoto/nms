@@ -1,0 +1,15 @@
+<h2>Sum of the outstanding debt of an specific condo including all units debts (including fines, interest and indexation until current date)</h2>
+
+<form method='get'>
+  <p>
+    <label>Condo Name</label>
+    <input type='text' name='condo_name' value='<%= @condo_name %>' />
+  </p>
+  <p>
+    <input type='submit' value='Search'/>
+  </p>
+</form>
+
+<% if @outstanding_debt.present? %>
+  <h2>Outstanding Debt: $<%= @outstanding_debt %></h2>
+<% end %>

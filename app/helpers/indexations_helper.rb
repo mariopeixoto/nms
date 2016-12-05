@@ -1,0 +1,2 @@
+module IndexationsHelper
+end
